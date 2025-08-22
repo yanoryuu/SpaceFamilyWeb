@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABOUT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="../TOP/index.html">
+        <img src="images/logo.png" alt="サイトロゴ" class="logo" />
+      </a>
+      <a href="../ABOUT/ABOUT.html">
+        <img src="images/ABOUT.png" alt="ABOUT" class="ABOUT" />
+      </a>
+      <a href="../MEMBERS/MEMBERS.html">
+        <img src="images/MEMBERS.png" alt="MEMBERS" class="MEMBERS" />
+      </a>
+      <a href="../WORKS/WORKS.html">
+        <img src="images/WORKS.png" alt="WORKS" class="WORKS" />
+      </a>
+<a href="https://www.google.com/maps/place/GALLERY+IRO/@35.7041234,139.5833333,17z/..." target="_blank" rel="noopener noreferrer">
+  <img src="images/ACSCESS.png" alt="ACCESS" class="ACSCESS" />
+</a>
+</a>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="main">
+      <img src="images/bback1.png" alt="WORKS" class="bback1" />
+      <img src="images/CONCEPT.png" alt="ACSCESS" class="CONCEPT" />
+      <img src="images/INSEKI.png" alt="ACSCESS" class="INSEKI" />
+      <img src="images/STORY.png" alt="WORKS" class="STORY" />
+      <img src="images/H.png" alt="ACSCESS" class="H" />
+      <img src="images/bback2.png" alt="WORKS" class="bback2" />
+      <img src="images/UFO2.png" alt="WORKS" class="UFO2" />
+      <img src="images/UFO.png" alt="WORKS" class="UFO" />
+      <img src="images/bback2.png" alt="WORKS" class="bback2" />
+      <img src="images/U.png" alt="WORKS" class="U fade-in" />
+      <img src="images/bback2.png" alt="WORKS" class="bback2" />
+      <img src="images/hroom.png" alt="WORKS" class="hroom fade-in" />
+      <img src="images/rroom.png" alt="WORKS" class="rroom fade-in" />
+      <img src="images/aroom.png" alt="WORKS" class="aroom fade-in" />
+      <img src="images/froom.png" alt="WORKS" class="froom fade-in" />
+      <img src="images/nroom.png" alt="WORKS" class="nroom fade-in" />
+      <img src="images/futter.png" alt="サイトロゴ" class="futter" />
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const targets = document.querySelectorAll(".hroom, .rroom, .aroom, .froom, .nroom,.U");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      targets.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

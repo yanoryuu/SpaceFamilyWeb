@@ -1,0 +1,238 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* フェードインアニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-in.active {
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ヘッダー */
+.header {
+  height: 200px;
+  background-color: #0A014D;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+/* ヘッダー内の画像の基本スタイル（リンク含む） */
+.header-inner img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで少し拡大する演出 */
+.header-inner img:hover {
+  transform: scale(1.2);
+}
+
+/* ロゴだけ大きく */
+.logo {
+  height: 90px !important;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  display: block;
+}
+
+/* 個別のメニュー画像の左右マージン調整 */
+.ABOUT {
+  margin-left: 25px;
+}
+
+.MEMBERS {
+  margin-left: 25px;
+}
+
+.WORKS {
+  margin-left: 25px;
+}
+
+.ACSCESS {
+  margin-left: 20px;
+}
+
+  .wback {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute; /* ←これが必要 */
+    top: 0;
+    left: 0;
+    z-index: -2; /* ← 背面に */
+  }
+
+  .henri {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  width:25%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .hart{
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .runa {
+  position: absolute;
+  top: 160%;
+  left: 2%;
+  width:25%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .rinoa {
+  position: absolute;
+  top: 280%;
+  left: 2%;
+  width:25%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .furor {
+  position: absolute;
+  top: 450%;
+  left: 2%;
+  width:25%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .nara {
+  position: absolute;
+  top: 610%;
+  left: 2%;
+  width:25%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+  .aart{
+  position: absolute;
+  top: 290%;
+  left: 33%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .rart{
+  position: absolute;
+  top: 170%;
+  left: 33%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  .nart{
+  position: absolute;
+  top: 620%;
+  left: 33%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+  .fart{
+  position: absolute;
+  top: 460%;
+  left: 33%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.futter {
+  position: absolute;
+  top: 930%;
+  left: 0%;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* キャラ画像をホバーで少し拡大 */
+.henri,
+.runa,
+.rinoa,
+.furor,
+.nara {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  z-index: 1;
+  transition: transform 0.3s ease; /* アニメーション */
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* 位置調整 */
+.henri { top: 20%; left: 2%; }
+.runa { top: 160%; left: 2%; }
+.rinoa { top: 280%; left: 2%; }
+.furor { top: 450%; left: 2%; }
+.nara { top: 610%; left: 2%; }
+
+/* ホバーで少し膨らむ */
+.henri:hover,
+.runa:hover,
+.rinoa:hover,
+.furor:hover,
+.nara:hover {
+  transform: scale(1.1); /* 1.1倍に拡大 */
+}

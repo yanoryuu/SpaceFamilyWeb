@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+.header {
+  height: 200px;
+  background-color: #0A014D;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+/* ヘッダー内の画像の基本スタイル（リンク含む） */
+.header-inner img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで少し拡大する演出 */
+.header-inner img:hover {
+  transform: scale(1.2);
+}
+
+/* ロゴだけ大きく */
+.logo {
+  height: 90px !important;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  display: block;
+}
+
+/* 個別のメニュー画像の左右マージン調整 */
+.ABOUT {
+  margin-left: 25px;
+}
+
+.MEMBERS {
+  margin-left: 25px;
+}
+
+.WORKS {
+  margin-left: 25px;
+}
+
+.ACSCESS {
+  margin-left: 20px;
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.mback {
+  position: relative;   /* これを追加 */
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 0;            /* 背景は一番奥 */
+}
+
+.fukuda {
+  position: absolute;
+  top: 32%;                /* 位置を指定 */
+  left: 10%;
+  width: 80%;
+  height: auto;
+  z-index: 1;            /* 背景より前に */
+}
+
+.hiruma {
+  position: absolute;
+  top: 140%;
+  left:10%;
+  width: 80%;
+  height: auto;
+  z-index: 2;            /* 福田より前に */
+}
+
+.yano {
+  position: absolute;
+  top: 244%;
+  left: 10%;
+  width: 80%;
+  height: auto;
+  z-index: 3;
+}
+
+.morioka {
+  position: absolute;
+  top: 343%;
+  left: 10%;
+  width: 80%;
+  height: auto;
+  z-index: 4;
+}
+
+.kaziki {
+  position: absolute;
+  top: 440%;
+  left: 10%;
+  width: 80%;
+  height: auto;
+  z-index: 4;
+}
+
+.futter {
+  position: absolute;
+  top: 558%;
+  left: 0%;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}

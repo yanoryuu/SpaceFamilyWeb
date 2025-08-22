@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+.header {
+  height: 200px;
+  background-color: #0A014D;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+/* ヘッダー内の画像の基本スタイル（リンク含む） */
+.header-inner img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで少し拡大する演出 */
+.header-inner img:hover {
+  transform: scale(1.2);
+}
+
+/* ロゴだけ大きく */
+.logo {
+  height: 90px !important;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  display: block;
+}
+
+/* 個別のメニュー画像の左右マージン調整 */
+.ABOUT {
+  margin-left: 25px;
+}
+
+.MEMBERS {
+  margin-left: 25px;
+}
+
+.WORKS {
+  margin-left: 25px;
+}
+
+.ACSCESS {
+  margin-left: 20px;
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.nback1 {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+}
+
+.nback2 {
+  position: absolute;
+  top: 0%;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.NARA {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.NARA2 {
+  position: absolute;
+  top: 184%;
+  left: 22%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  animation: cute-wiggle 2.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes cute-wiggle {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  15%  { transform: translate(5px, -5px) rotate(5deg); }
+  35%  { transform: translate(0, -30px) rotate(10deg); }
+  55%  { transform: translate(-5px, 5px) rotate(-5deg); }
+  75%  { transform: translate(5px, 5px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.ナークオル {
+  position: absolute;
+  top: 222%;
+  left: 2%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+.NARA3 {
+  position: absolute;
+  top: 300%;
+  left: 38%;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.futter {
+  position: absolute;
+  top: 394%;
+  left: 0%;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) scale(0.8) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(800px, 600px) scale(0.4) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: fixed;
+  width: 60px;
+  height: auto;
+  opacity: 0;
+  animation: shoot 4s linear infinite;
+  filter: drop-shadow(0 0 20px white);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.star1 { top: 5%;  left: 10%;  animation-delay: 0s; }
+.star2 { top: 15%; left: 80%; animation-delay: 1s; }
+.star3 { top: 30%; left: 40%; animation-delay: 2s; }
+.star4 { top: 60%; left: 5%;  animation-delay: 3s; }
+.star5 { top: 45%; left: 70%; animation-delay: 4s; }
+.star6 { top: 20%; left: 50%; animation-delay: 5s; }
+.star7 { top: 10%; left: 30%; animation-delay: 6s; }
+.star8 { top: 70%; left: 60%; animation-delay: 7s; }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: none; /* activeになるまで動かさない */
+}
+
+.fade-in.active {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

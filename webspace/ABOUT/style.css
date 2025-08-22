@@ -1,0 +1,311 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* ヘッダー */
+.header {
+  height: 200px;
+  background-color: #0A014D;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 30px;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+/* ヘッダー内の画像の基本スタイル（リンク含む） */
+.header-inner img {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* ホバーで少し拡大する演出 */
+.header-inner img:hover {
+  transform: scale(1.2);
+}
+
+/* ロゴだけ大きく */
+.logo {
+  height: 90px !important;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  display: block;
+}
+
+/* 個別のメニュー画像の左右マージン調整 */
+.ABOUT {
+  margin-left: 25px;
+}
+
+.MEMBERS {
+  margin-left: 25px;
+}
+
+.WORKS {
+  margin-left: 25px;
+}
+
+.ACSCESS {
+  margin-left: 20px;
+}
+
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .bback1 {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute; /* ←これが必要 */
+    top: 0;
+    left: 0;
+    z-index: -2; /* ← 背面に */
+  }
+
+  .CONCEPT {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 25%;
+    left: 8%;          /* ← margin-left の代わりにこれ */
+    z-index: 1;
+  }
+
+
+  .INSEKI {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    top: 35%;
+    left: 60%;     /* ← 追加！必要なら 3% でもOK */
+    z-index: 1;
+  }
+  .STORY {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 75%;
+    left: 8%;     /* ← 追加！必要なら 3% でもOK */
+    z-index: 1;
+  }
+
+
+  .H {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 75%;
+      left: 40%;     /* ← 追加！必要なら 3% でもOK */
+    margin-left: 3%;
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .bback2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute; /* ←これが必要 */
+    top: 193%;
+    left: 0;
+    z-index: -2; /* ← 背面に */
+  }
+  .UFO2{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 204%;
+      left: 8%;     /* ← 追加！必要なら 3% でもOK */
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .UFO {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 230%;
+      left: 0%;     /* ← 追加！必要なら 3% でもOK */
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .U{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 350%;
+      left: 22%;     /* ← 追加！必要なら 3% でもOK */
+    margin-left: 3%;
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .hroom{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 450%;
+      left: 12%;     /* ← 追加！必要なら 3% でもOK */
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .rroom{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 550%;
+      left: 12%;     /* ← 追加！必要なら 3% でもOK */
+
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .aroom{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 650%;
+      left: 12%;     /* ← 追加！必要なら 3% でもOK */
+
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .froom{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 750%;
+      left: 12%;     /* ← 追加！必要なら 3% でもOK */
+  
+    z-index: 1; /* ← 前面に来るように */
+  }
+  .nroom{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 850%;
+      left: 12%;     /* ← 追加！必要なら 3% でもOK */
+
+    z-index: 1; /* ← 前面に来るように */
+  }
+
+  .futter {
+    position: absolute;
+    top: 950%;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* 初期状態（透明・下に少しずれてる） */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  /* 表示時の状態 */
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+@keyframes shake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-2px, 2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+.INSEKI {
+  animation: shake 0.3s linear infinite;
+}
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.H {
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+@keyframes cuteShake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-5px, 3px) rotate(-5deg);
+  }
+  40% {
+    transform: translate(5px, -3px) rotate(5deg);
+  }
+  60% {
+    transform: translate(-3px, 2px) rotate(-3deg);
+  }
+  80% {
+    transform: translate(3px, -2px) rotate(3deg);
+  }
+}
+
+.INSEKI {
+  animation: cuteShake 3s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes mysteriousGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #99ccff);
+    opacity: 0.9;
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #66aaff);
+    opacity: 1;
+  }
+}
+
+.UFO {
+  animation: mysteriousGlow 3s ease-in-out infinite;
+  transform-origin: center center;
+}
+a {
+  display: inline-block; /* リンクに幅が指定しやすくなる */
+}
+
+img {
+  display: block; /* 画像下の微妙な隙間をなくす */
+  width: 100%;    /* 親の幅に合わせる */
+  height: auto;
+}
+
+.logo-link {
+  display: inline-block;
+  width: 1400px; /* ここを適切に調整 */
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
